@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MFCC.Pages.ImageControlPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MFCC"
+	Title="ImageControlPage">
+	<VerticalStackLayout VerticalOptions="Center">
+		<local:ImageTintColor
+			x:Name="img"
+			BackgroundColor="Fuchsia"
+			Source="shield.png"
+			TintColor="Orange" />
+	</VerticalStackLayout>
+</ContentPage>
