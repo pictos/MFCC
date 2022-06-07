@@ -2,7 +2,7 @@
 public class ImageTintColor : Image
 {
 	public static readonly BindableProperty TintColorProperty =
-		BindableProperty.Create(nameof(TintColor), typeof(Color), typeof(ImageTintColor), Colors.Transparent, propertyChanged: OnTintColorChanged);
+		BindableProperty.Create(nameof(TintColor), typeof(Color), typeof(ImageTintColor), propertyChanged: OnTintColorChanged);
 
 	public Color TintColor
 	{

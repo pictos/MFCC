@@ -9,7 +9,8 @@
 			Padding="30,0"
 			Spacing="25"
 			VerticalOptions="Center">
-			<Button Clicked="ButtonCustomControl_Clicked" Text="Using custom control" />
+			<Button Clicked="ButtonCustomControl" Text="Using custom control" />
+			<Button Clicked="ButtonMapper" Text="Using Mapper" />
 
 		</VerticalStackLayout>
 	</ScrollView>

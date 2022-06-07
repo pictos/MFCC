@@ -9,9 +9,15 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void ButtonCustomControl_Clicked(object sender, EventArgs e)
+	private void ButtonCustomControl(object sender, EventArgs e)
 	{
 		Shell.Current.GoToAsync(nameof(ImageControlPage));
+	}
+
+	private void ButtonMapper(object sender, EventArgs e)
+	{
+		TintColorMapper.ApplyMapper();
+		Shell.Current.GoToAsync(nameof(ImageMapper));
 	}
 }
 
