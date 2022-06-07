@@ -11,6 +11,7 @@
 			VerticalOptions="Center">
 			<Button Clicked="ButtonCustomControl" Text="Using custom control" />
 			<Button Clicked="ButtonMapper" Text="Using Mapper" />
+			<Button Clicked="ButtonBehavior" Text="Using Behavior" />
 
 		</VerticalStackLayout>
 	</ScrollView>

@@ -19,5 +19,10 @@ public partial class MainPage : ContentPage
 		TintColorMapper.ApplyMapper();
 		Shell.Current.GoToAsync(nameof(ImageMapper));
 	}
+
+	private void ButtonBehavior(object sender, EventArgs e)
+	{
+		Shell.Current.GoToAsync(nameof(ImageBehaviorPage));
+	}
 }
 

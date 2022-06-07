@@ -10,5 +10,6 @@ public partial class AppShell : Shell
 
         Routing.RegisterRoute(nameof(ImageControlPage), typeof(ImageControlPage));
         Routing.RegisterRoute(nameof(ImageMapper), typeof(ImageMapper));
+        Routing.RegisterRoute(nameof(ImageBehaviorPage), typeof(ImageBehaviorPage));
     }
 }

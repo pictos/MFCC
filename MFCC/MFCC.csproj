@@ -83,6 +83,9 @@
 	  <None Remove="Resources\Images\shield.png" />
 	</ItemGroup>
 	<ItemGroup>
+	  <MauiXaml Update="Pages\ImageBehaviorPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\ImageControlPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
