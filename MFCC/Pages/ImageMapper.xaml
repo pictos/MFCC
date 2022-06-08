@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-	x:Class="MFCC.Pages.ImageMapper"
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:local="clr-namespace:MFCC"
-	Title="ImageMapper">
-	<VerticalStackLayout VerticalOptions="Center">
-		<Image
-			x:Name="img"
-			local:TintColorMapper.TintColor="Orange"
-			BackgroundColor="Fuchsia"
-			Source="shield.png" />
-	</VerticalStackLayout>
+    x:Class="MFCC.Pages.ImageMapper"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MFCC"
+    Title="ImageMapper">
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center">
+            <Image
+                x:Name="img"
+                local:TintColorMapper.TintColor="Orange"
+                BackgroundColor="Fuchsia"
+                Source="shield.png" />
+
+            <Image BackgroundColor="Red" Source="shield.png" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

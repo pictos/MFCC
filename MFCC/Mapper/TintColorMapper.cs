@@ -18,7 +18,25 @@ public static class TintColorMapper
 		{
 			if (handler.VirtualView is null || handler.PlatformView is null)
 				return;
+			var tintColor = GetTintColor((Image)view);
+			if (tintColor is not null)
+			{
+#if ANDROID
+				ImageEx.ApplyColor(handler.PlatformView, tintColor);
+#elif IOS
+                ImageEx.ApplyColor(handler.PlatformView, tintColor);
+#endif
+            }
+            else
+            {
 
-		});
+#if ANDROID
+                ImageEx.ClearColor(handler.PlatformView);
+#elif IOS
+                ImageEx.ClearColor(handler.PlatformView);
+#endif
+
+            }
+        });
 	}
 }
