@@ -16,6 +16,32 @@ public class ImageTintColor : Image
 		var control = (ImageTintColor)bindable;
 		var tintColor = control.TintColor;
 
-		// TODO: Implement this code
-	}
+		if (control.Handler is null)
+        {
+			control.HandlerChanged += (_, __) =>
+			{
+				OnTintColorChanged(bindable, oldValue, newValue);
+			};
+
+			return;
+        }
+
+		if (tintColor is not null)
+        {
+#if ANDROID
+			ImageEx.ApplyColor((Android.Widget.ImageView)control.Handler.PlatformView, tintColor);
+#elif IOS
+			ImageEx.ApplyColor((UIKit.UIImageView)control.Handler.PlatformView, tintColor);
+#endif
+		}
+        else
+        {
+#if ANDROID
+			ImageEx.ClearColor((Android.Widget.ImageView)control.Handler.PlatformView);
+#elif IOS
+            ImageEx.ClearColor((UIKit.UIImageView)control.Handler.PlatformView);
+#endif
+
+        }
+    }
 }
